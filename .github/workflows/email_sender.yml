@@ -1,6 +1,10 @@
 name: "Send email after workflow"
 
 on:
+    push:
+        branches:
+            - main
+
     workflow_dispatch:
         
 jobs:
@@ -17,7 +21,7 @@ jobs:
 
             - working-directory: .github/workflows
               name: "Copy python script"
-              run: cp script.py ../
+              run: cp script.py
 
             - name: "Install dependencies"
               run: |
