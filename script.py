@@ -1,4 +1,4 @@
-import smtplib;
+import smtplib
 from email.mime.text import MIMEText # MIMEText is a class that represents the text of the email
 from email.mime.multipart import MIMEMultipart # MIMEMultipart is a class that represent the email message it self
 import os
