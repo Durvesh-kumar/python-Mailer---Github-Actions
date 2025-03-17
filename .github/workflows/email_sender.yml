@@ -15,10 +15,15 @@ jobs:
               with:
                 python-version: '3.x'
 
+            - working-directory: .github/workflows
+              name: "Copy python script"
+              run: cp script.py ../
+
             - name: "Install dependencies"
               run: |
                python -m pip install --upgrade pip
             #    pip install -r smtplip email
+              
 
             - name: "Send mail by executing python script"
               run: pyhton script.py
